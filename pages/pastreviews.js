@@ -4,6 +4,7 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 import Link from 'next/link';
 
 export async function getServerSideProps({ req, res }) {
+    // retrieve data from database
     const datan = await prisma.feedback.findMany({
         select: {
             isbn: true,
@@ -25,6 +26,8 @@ export async function getServerSideProps({ req, res }) {
 const Ninjas = ({ ninjas }) => {
 
     let table = '<table border="1">';
+    //create table to visualize data
+    
     table += `<tr><th>ISBN</th><th>Title</th><th>Author</th><th>Rating</th><th>Content</th><th>Delete?</th></tr>`;
     ninjas.forEach((book, index) => {
         table = table + `<tr>`;
@@ -42,6 +45,7 @@ const Ninjas = ({ ninjas }) => {
 
      
     const handleSubmit = async(e) => {
+        // create table
         e.preventDefault();
         document.getElementById('buttoning2').disabled = true;
         document.getElementById('expand').innerHTML = table;
@@ -50,7 +54,7 @@ const Ninjas = ({ ninjas }) => {
     }
 
     const handledelete = async(e) => {
-        console.log("Handle delete")
+        // delete selected entries
 
         e.preventDefault();
         document.getElementById('for-delete').disabled = true;
