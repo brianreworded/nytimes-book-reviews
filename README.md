@@ -1,7 +1,7 @@
-URL: 
+URL: https://nytimes-book-reviews.vercel.app/
 
 
-Tech stack used: Next.js, Prisma, Supabase, NodeJS
+Tech stack used: Next.js, Prisma, Supabase, NodeJS, Vercel
 
 
 Username for website: username
