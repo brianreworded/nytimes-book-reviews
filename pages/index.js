@@ -170,7 +170,7 @@ export default function Search() {
   }
   catch(error){
     document.getElementById('buttoning').disabled = false;
-    alert("There was an error, try again!");
+    alert("There was an error. Likely, the author did not write a book that was reviewed by the New York Times and tracked in the reviews database. Else, there is a bug.");
   }
       
        
