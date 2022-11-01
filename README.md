@@ -5,6 +5,7 @@ Tech stack used: Next.js, Prisma, Supabase, NodeJS
 
 
 Username for website: username
+
 Password: password
 
 
