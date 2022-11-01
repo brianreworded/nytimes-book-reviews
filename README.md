@@ -8,6 +8,7 @@ Username for website: username
 
 Password: password
 
+Once you make a search on the home page of the website, you can add a rating, representing a scale from 0-5, and you can add comments. Then, when you feel ready, you can press the submit button at the bottom of the page and all of the reviews you made will be added to the database.
 
 
 How I approached the project:
@@ -23,3 +24,15 @@ How I approached the project:
 
 - The primary ID system for the NY Times Books did not work for me (all entries were 0s). So, I used the first ISBN code for the books as the ID. In the cases I tried with, it worked well. However, because it is not a normal ID system, there may be circumstances that the code may break.
 
+- I noticed that there appeared to be some duplicate entries in the database -- I'm not sure why exactly!
+
+
+
+Ways I could make it better (other than web design and improving sign in and login features):
+
+
+- I noticed that there appear to be some duplicate entries in the database -- I'm not sure why exactly but I could try to filter them out.
+
+- The main personal review database is not currently connected in the other direction on the home page. In other words, past entries and corresponding ratings will not show up to the user after the initial search. This idea could improve the website experience significantly for the end user.
+
+- I could add better filters for the book summaries and/or improve the search functions so the requirements are not so strict. 
