@@ -26,7 +26,7 @@ export async function getServerSideProps({ req, res }) {
 const Ninjas = ({ ninjas }) => {
 
     let table = '<table border="1">';
-    //create table to visualize data
+    //create format for table to visualize data
     
     table += `<tr><th>ISBN</th><th>Title</th><th>Author</th><th>Rating</th><th>Content</th><th>Delete?</th></tr>`;
     ninjas.forEach((book, index) => {
@@ -45,7 +45,7 @@ const Ninjas = ({ ninjas }) => {
 
      
     const handleSubmit = async(e) => {
-        // create table
+        // actually create table
         e.preventDefault();
         document.getElementById('buttoning2').disabled = true;
         document.getElementById('expand').innerHTML = table;
@@ -60,11 +60,12 @@ const Ninjas = ({ ninjas }) => {
         document.getElementById('for-delete').disabled = true;
         try {
             var main = ""
-            console.log("OKAY 2")
+            //console.log("OKAY 2")
             for (let i = 0; i < ninjas.length; i++){
+                // for each row, if selected to be deleted, delete item from database
                 main =  "delete"+i
-                console.log("Tested Value: ", document.getElementById(main).value)
-                if (document.getElementById(main).value == 'Yes'){
+                console.log("Tested Value: ", document.getElementById(main).value) 
+                if (document.getElementById(main).value == 'Yes'){ 
                     console.log("OKAY 3")
                     var isbn = ninjas[i].isbn;
                     const body = {isbn}
